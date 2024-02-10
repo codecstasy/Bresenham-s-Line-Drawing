@@ -4,7 +4,21 @@
 
 ### Algorithm Adjustment for \(m > 1\)
 
-In the traditional Bresenham's algorithm, the loop typically iterates over x-values for \(0 < m < 1\). To handle the case where \(m > 1\), I modified the algorithm to iterate over y-values instead. This adjustment ensures the algorithm works correctly for lines with slopes greater than 1.
+In the traditional Bresenham's algorithm, the loop iterates over x-values for \(0 < m < 1\). However, when dealing with slopes \(m > 1\), adjustments are necessary to ensure accurate line drawing.
 
-The specific adjustment is made in the loop initialization and incrementing section of the `draw_line` function in `draw_line.py`. By detecting the case automatically, the function determines whether to iterate over x-values or y-values based on the slope.
+#### Iterating Over Y-values
+
+To accommodate the case where \(m > 1\), the algorithm has been modified to iterate over y-values instead of x-values. This adjustment is crucial to handle lines with slopes greater than 1.
+
+#### Loop Adjustment in Code
+
+The specific modification is implemented within the `draw_line` function in `draw_line.py`. By dynamically detecting the slope of the line, the function determines whether to iterate over x-values or y-values. This approach ensures the algorithm's effectiveness for a broad range of slope values.
+
+## Graphical Outputs
+
+### Case 1
+![Case 1 Output](Graphical%20Outputs/Case_1.jpg)
+
+### Case 2
+![Case 2 Output](Graphical%20Outputs/Case_2.jpg)
 
